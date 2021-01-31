@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Ana Sayfa</title>
-	 <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-<h3>Deprem Büyüklük Tahmin Aracı</h3>
-<div>
-    <form action="/tahmin" method="post">
-        <p>Koordinat_X Giriniz:</p>
-        <input type="text" name="koordinat1">
-		<p>Koordinat_Y Giriniz:</p>
-		<input type="text" name="koordinat2">
-        <input type="submit" class="btn-info" value="Sınıflandır">
-    </form>
-</div>
-
-
-</body>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="row" style="height: 100vh; width: 100vw;">
+      <div class="m-auto">
+        <h3>Deprem Büyüklük Tahmin Aracı</h3>
+        <form action="/tahmin" method="post">
+          <p>Koordinat_X Giriniz:</p>
+          <input type="text" class="py-2 rounded" style="width: 250px;" pattern="^[0-9.]+$" name="koordinat1" required/>
+          <p>Koordinat_Y Giriniz:</p>
+          <input type="text" class="py-2 rounded" style="width: 250px;" pattern="^[0-9.]+$" name="koordinat2" required/>
+          <input type="submit" class="btn btn-info d-block mt-3 px-4 py-2" value="Tahmin Et" />
+        </form>
+        <p class="text-muted pb-0 mt-3"><b>Not :</b> Lütfen koordinat bilgilerini nokta kullanarak giriniz.</p>
+        <p class="text-muted pt-0">Örneğin: 38.5274</p>
+      </div>
+    </div>
+  </body>
 </html>
